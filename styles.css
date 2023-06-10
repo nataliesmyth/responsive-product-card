@@ -1,0 +1,26 @@
+/***** Custom Properties *****/
+
+:root {
+    /* colors */
+    --clr-dark-primary: 212, 21%, 14%;
+    --clr-light--primary: 30, 38%, 92%;
+    --clr-dark-neutral: 212, 21%, 14%;
+    --clr-mid-neutral: 228, 12%, 48%;
+    --clr-light-neutral: 0, 0%, 100%;
+
+    /* font-weights */
+    --fw-700: 700;
+    --fw-500: 500
+
+    /* font-families */
+    --ff-serif: 'Fraunces', serif;
+    --ff-sans-serif: 'Montserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
