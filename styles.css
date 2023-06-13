@@ -145,6 +145,10 @@ main {
     font-family: var(--ff-base);
 }
 
+.icon {
+    padding-right: 8px;
+}
+
 footer {
     text-align: center;
     margin-top: 3em;
