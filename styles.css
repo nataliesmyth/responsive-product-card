@@ -3,6 +3,7 @@
 :root {
     /* colors */
     --clr-primary: hsl(158, 36%, 37%);
+    --clr-primary-dark: hsl(158, 36%, 17%);
     --clr-secondary: hsl(30, 38%, 92%);
 
     --clr-dark-neutral: hsl(212, 21%, 14%);
@@ -89,8 +90,11 @@ main {
 /* Product Styling */
 
 .product {
+    /* local custom properties */
     --content-padding: 1.5rem;
     --content-spacing: 1rem;
+
+    display: grid;
     background-color: var(--clr-light-neutral);
     border-radius: 0.5rem;
     overflow: hidden;
@@ -147,17 +151,32 @@ main {
 }
 
 .btn {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
     width: 100%;
     margin-top: 1em;
     padding: 1em 3em;
-    border-radius: 10px;
-    background: var(--clr-primary);
+
+    border: 0;
+    border-radius: .5rem;
+    background-color: var(--clr-primary);
     color: var(--clr-light-neutral);
-    font-family: var(--ff-base);
+    /* font-family: var(--ff-base); */
 }
 
-.icon {
-    padding-right: 8px;
+.btn[data-icon="shopping-cart"]::before {
+    content: "";
+    background-image: url(images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+}
+
+.btn:is(:hover, :focus) {
+    background-color: var(--clr-primary-dark);
 }
 
 footer {
@@ -166,14 +185,9 @@ footer {
     font-size: .75em;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
     .product {
-        display: flex;
-    }
-    
-    .product__img {
-        background: url(./images/image-product-desktop.jpg) no-repeat center center fixed;
-        border-radius: 10px 0 0 10px;
+        grid-template-columns: 1fr 1fr;
     }
 
 }

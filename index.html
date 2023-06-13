@@ -10,11 +10,8 @@
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/9cea9f30d2.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Product preview card component</title>
 
@@ -24,6 +21,7 @@
   <main>
     <article class="product">
       <picture class="product__img">
+        <source srcset="images/image-product-desktop.jpg" media="(min-width: 600px)">
         <img src="./images/image-product-mobile.jpg" alt="Gabrielle Essence Eau De Parfum perfume bottle">
       </picture>
       <div class="product__content">
@@ -42,8 +40,8 @@
             </s>
           </p>
         </div>
-        <button class="btn">
-          <i class="fa-solid fa-cart-shopping icon"></i>
+        <button class="btn" data-icon="shopping-cart">
+
           Add to Cart
         </button>
       </div>
